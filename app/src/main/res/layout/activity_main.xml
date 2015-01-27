@@ -1,0 +1,288 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:scaleType="fitXY"
+    android:longClickable="true"
+    android:id="@+id/layout">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Player 1"
+        android:id="@+id/textView8"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="20"
+        android:id="@+id/player1life"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/textView8"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="40dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="+"
+        android:id="@+id/p1plus1"
+        android:layout_below="@+id/player1life"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="changeLife" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="+5"
+        android:id="@+id/p1plus5"
+        android:layout_below="@+id/player1life"
+        android:layout_toRightOf="@+id/p1plus1"
+        android:layout_toEndOf="@+id/p1plus1"
+        android:onClick="changeLife" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="-"
+        android:id="@+id/p1minus1"
+        android:layout_below="@+id/p1plus1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="changeLife" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="-5"
+        android:id="@+id/p1minus5"
+        android:layout_alignTop="@+id/p1minus1"
+        android:layout_toRightOf="@+id/p1minus1"
+        android:layout_toEndOf="@+id/p1minus1"
+        android:onClick="changeLife" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Player 2"
+        android:id="@+id/textView9"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/player2life"
+        android:layout_alignStart="@+id/player2life" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Player 3"
+        android:id="@+id/textView11"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Player 4"
+        android:id="@+id/textView12"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="20"
+        android:id="@+id/player2life"
+        android:textSize="40dp"
+        android:layout_alignTop="@+id/player1life"
+        android:layout_alignLeft="@+id/textView12"
+        android:layout_alignStart="@+id/textView12" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="+"
+        android:id="@+id/p2plus1"
+        android:layout_below="@+id/player1life"
+        android:layout_alignLeft="@+id/textView9"
+        android:layout_alignStart="@+id/textView9"
+        android:onClick="changeLife" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="+5"
+        android:id="@+id/p2plus5"
+        android:layout_alignTop="@+id/p2plus1"
+        android:layout_toRightOf="@+id/p2plus1"
+        android:layout_toEndOf="@+id/p2plus1"
+        android:onClick="changeLife" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="-"
+        android:id="@+id/p2minus1"
+        android:layout_alignTop="@+id/p1minus5"
+        android:layout_alignLeft="@+id/p2plus1"
+        android:layout_alignStart="@+id/p2plus1"
+        android:onClick="changeLife" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="-5"
+        android:id="@+id/p2minus5"
+        android:layout_below="@+id/p1plus5"
+        android:layout_alignRight="@+id/p2plus5"
+        android:layout_alignEnd="@+id/p2plus5"
+        android:onClick="changeLife" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="20"
+        android:id="@+id/player3life"
+        android:textSize="40dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/textView11"
+        android:layout_alignLeft="@+id/player1life"
+        android:layout_alignStart="@+id/player1life" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="+"
+        android:id="@+id/p3plus1"
+        android:layout_below="@+id/player3life"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="changeLife" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="+5"
+        android:id="@+id/p3plus5"
+        android:layout_alignBottom="@+id/p3plus1"
+        android:layout_toRightOf="@+id/p3plus1"
+        android:layout_toEndOf="@+id/p3plus1"
+        android:onClick="changeLife" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="-"
+        android:id="@+id/p3minus1"
+        android:layout_below="@+id/p3plus1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="changeLife" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="-5"
+        android:id="@+id/p3minus5"
+        android:layout_below="@+id/p3plus1"
+        android:layout_alignRight="@+id/textView11"
+        android:layout_alignEnd="@+id/textView11"
+        android:onClick="changeLife" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="20"
+        android:id="@+id/player4life"
+        android:textSize="40dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignTop="@+id/player3life"
+        android:layout_alignLeft="@+id/textView12"
+        android:layout_alignStart="@+id/textView12" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="+"
+        android:id="@+id/p4plus1"
+        android:layout_below="@+id/player4life"
+        android:layout_alignLeft="@+id/player4life"
+        android:layout_alignStart="@+id/player4life"
+        android:onClick="changeLife" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="+5"
+        android:id="@+id/p4plus5"
+        android:layout_alignTop="@+id/p4plus1"
+        android:layout_alignRight="@+id/textView12"
+        android:layout_alignEnd="@+id/textView12"
+        android:onClick="changeLife" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="-"
+        android:id="@+id/p4minus1"
+        android:layout_below="@+id/p4plus1"
+        android:layout_alignLeft="@+id/p4plus1"
+        android:layout_alignStart="@+id/p4plus1"
+        android:onClick="changeLife" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="-5"
+        android:id="@+id/p4minus5"
+        android:layout_below="@+id/p4plus1"
+        android:layout_alignRight="@+id/textView12"
+        android:layout_alignEnd="@+id/textView12"
+        android:onClick="changeLife" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/losers"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="30dp" />
+
+</RelativeLayout>
